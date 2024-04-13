@@ -57,7 +57,7 @@ public class Workspace extends Gmail{
             LocalTime currentStartTime = currentMeeting.getStartTime();
 
             // Check if current meeting starts after the end time of the last attended meeting
-            if (currentStartTime.compareTo(endTime) >= 0) {
+            if (currentStartTime.compareTo(endTime) > 0) {
                 maxMeetings++;
                 endTime = currentMeeting.getEndTime(); // Update end time
             }
